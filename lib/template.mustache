@@ -16,9 +16,11 @@
 		{{#failed}}
 		<h2>Failures:</h2>
 		<ul class="failures">
+		{{/failed}}
 			{{#failures}}
 				<li><a href="#error_{{index}}">{{test}}</a></li>
 			{{/failures}}
+		{{#failed}}
 		</ul>
 		{{/failed}}
 
