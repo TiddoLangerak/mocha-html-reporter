@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Mocha results - {{passes}}/{{tests}} passed</title>
+	</head>
+	<body>
+		<h1>Summary</h1>
+		<dl>
+			<dt>Total tests:</dt>
+			<dd>{{tests}}</dd>
+			<dt>Passed:</dt>
+			<dd>{{passes}}</dd>
+			<dt>Failed</dt>
+			<dd>{{failed}}</dd>
+		</dl>
+		{{#failed}}
+		<h2>Failures:</h2>
+		<ul class="failures">
+			{{#failures}}
+				<li><a href="#{{index}}">{{test}}</a></li>
+			{{/failures}}
+		</ul>
+		{{/failed}}
+
+		{{results}}
+
+	</body>
+</html>
