@@ -1,6 +1,6 @@
 {
   "name": "mocha-html-reporter",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Html reporter for mocha",
   "main": "index.js",
   "author": "Tiddo Langerak <tiddolangerak@gmail.com>",
