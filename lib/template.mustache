@@ -4,9 +4,22 @@
 		<title>Mocha results - {{passes}}/{{tests}} passed</title>
 		<link href="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet" media="screen">
 		<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?skin=sunburst"></script>
+
+		<style type="text/css">
+
+		</style>
 	</head>
-	<body>
+	<body class="container">
 		<h1>Summary</h1>
+    <div class="progress">
+			<div class="bar bar-success" style="width: {{successPercentage}}%;"></div>
+			<div class="bar bar-danger" style="width: {{failurePercentage}}%;"></div>
+    </div>
+		{{#failed}}
+		<div class="alert alert-error">
+			<strong>Unit tests failed!</strong>
+		</div>
+		{{/failed}}
 		<dl>
 			<dt>Total tests:</dt>
 			<dd>{{tests}}</dd>
@@ -17,13 +30,13 @@
 		</dl>
 		{{#failed}}
 		<h2>Failures:</h2>
-		<ul class="failures">
+		<ol class="failures">
 		{{/failed}}
 			{{#failures}}
 				<li><a href="#error_{{index}}">{{test}}</a></li>
 			{{/failures}}
 		{{#failed}}
-		</ul>
+		</ol>
 		{{/failed}}
 
 		{{{results}}}
