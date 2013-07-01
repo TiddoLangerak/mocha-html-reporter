@@ -11,6 +11,7 @@
 	</head>
 	<body class="container">
 		<h1>Summary</h1>
+		<hr>
     <div class="progress">
 			<div class="bar bar-success" style="width: {{successPercentage}}%;"></div>
 			<div class="bar bar-danger" style="width: {{failurePercentage}}%;"></div>
@@ -29,7 +30,8 @@
 			<dd>{{failed}}</dd>
 		</dl>
 		{{#failed}}
-		<h2>Failures:</h2>
+		<h1>Failures</h1>
+		<hr>
 		<ol class="failures">
 		{{/failed}}
 			{{#failures}}
@@ -39,7 +41,10 @@
 		</ol>
 		{{/failed}}
 
+		<h1>Results</h1>
+		<hr>
 		{{{results}}}
+
 
 	</body>
 </html>
