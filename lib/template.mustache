@@ -31,6 +31,7 @@
     <div class="progress">
 			<div class="bar bar-success" style="width: {{successPercentage}}%;"></div>
 			<div class="bar bar-danger" style="width: {{failurePercentage}}%;"></div>
+			<div class="bar bar-info" style="width: {{pendingPercentage}}%;"></div>
     </div>
 		{{#failed}}
 		<div class="alert alert-error">
@@ -44,6 +45,10 @@
 			<dd>{{passes}}</dd>
 			<dt>Failed</dt>
 			<dd>{{failed}}</dd>
+			{{#pending}}
+				<dt>Pending</dt>
+				<dd>{{pending}}</dd>
+			{{/pending}}
 		</dl>
 		{{#failed}}
 		<h1>Failures</h1>
